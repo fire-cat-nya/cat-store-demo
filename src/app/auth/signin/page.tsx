@@ -41,7 +41,8 @@ export default function SignIn() {
       router.push("/");
       router.refresh();
       setIsLoading(false);
-    } catch (error) {
+    } catch (err) {
+      console.error("Login error:", err);
       setError("ログイン中にエラーが発生しました");
       setIsLoading(false);
     }

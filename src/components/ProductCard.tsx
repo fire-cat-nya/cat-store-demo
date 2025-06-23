@@ -3,6 +3,7 @@
 import { Star, Heart, ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 interface ProductCardProps {
   id: number;
@@ -67,9 +68,11 @@ export default function ProductCard({
 
         {/* Product image */}
         <div className="h-64 overflow-hidden">
-          <img
+          <Image
             src={imageUrl}
             alt={name}
+            width={256}
+            height={256}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>

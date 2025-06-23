@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 interface SlideData {
   id: number;
@@ -157,9 +158,11 @@ export default function HeroSlider() {
                 className="relative"
               >
                 <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
-                  <img
+                  <Image
                     src={slides[currentSlide].imageUrl}
                     alt="ランジェリーコレクション"
+                    width={384}
+                    height={384}
                     className="w-full h-full object-cover"
                   />
                 </div>
