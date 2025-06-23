@@ -41,10 +41,11 @@ export async function POST(request: Request) {
     });
 
     // パスワードを除外してレスポンスを返す
-    const { password: _, ...userWithoutPassword } = user;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { password: _password, ...userWithoutPassword } = user;
     return NextResponse.json(userWithoutPassword, { status: 201 });
-  } catch (error) {
-    console.error("Signup error:", error);
+  } catch (err) {
+    console.error("Signup error:", err);
     return NextResponse.json(
       { message: "ユーザー登録中にエラーが発生しました。" },
       { status: 500 }
