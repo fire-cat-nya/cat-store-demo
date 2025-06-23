@@ -9,14 +9,16 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSlider />
-        <ProductGrid
-          title="今週のおすすめ"
-          subtitle="厳選されたプレミアムランジェリーコレクション"
-        />
-        <ProductGrid
-          title="新着商品"
-          subtitle="最新のトレンドを取り入れた美しいデザイン"
-        />
+        <div className="container mx-auto px-4">
+          <ProductGrid
+            title="今週のおすすめ"
+            subtitle="厳選されたプレミアムランジェリーコレクション"
+          />
+          <ProductGrid
+            title="新着商品"
+            subtitle="最新のトレンドを取り入れた美しいデザイン"
+          />
+        </div>
       </main>
       <Footer />
     </>

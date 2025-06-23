@@ -1,16 +1,15 @@
 "use client";
 
 import { Search, ShoppingCart, MapPin } from "lucide-react";
-import { useTheme } from "@/contexts/ThemeContext";
 import Link from "next/link";
 import { useState } from "react";
 import { useSession, signOut } from "next-auth/react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function Header() {
-  const { currentTheme, switchTheme } = useTheme();
-
   const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
   const { data: session } = useSession();
+  const { currentTheme, switchTheme } = useTheme();
 
   const handleLanguageChange = () => {
     switchTheme();

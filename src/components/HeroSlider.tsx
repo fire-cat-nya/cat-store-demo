@@ -122,7 +122,7 @@ export default function HeroSlider() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="absolute inset-0 flex items-center relative z-20"
         >
-          <div className="container mx-auto px-8 flex items-center">
+          <div className="w-full h-full flex items-center">
             {/* Content */}
             <div className="w-1/2 pr-8">
               <motion.div
